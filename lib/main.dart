@@ -12,7 +12,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.green,
-        body: Image.asset('assets/logo.jpg'),
+        body: Container(
+          margin: EdgeInsets.only(top: 100),
+          child: Padding(
+          
+            padding: const EdgeInsets.all(8.0),
+            child: Image.asset('assets/logo.jpg'),
+          ),
+        ),
       ),
     );
   }
