@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/splash.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,17 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.green,
-        body: Container(
-          margin: EdgeInsets.only(top: 100),
-          child: Padding(
-          
-            padding: const EdgeInsets.all(8.0),
-            child: Image.asset('assets/logo.jpg'),
-          ),
-        ),
-      ),
+      home: SplashScreen()
     );
   }
 }
