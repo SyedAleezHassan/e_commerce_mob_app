@@ -1,12 +1,13 @@
 import 'package:e_commerce_app/NextScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 5), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) => NextScreen()),
       );
@@ -14,10 +15,15 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
         body: Column(
       children: [
-        Container(
-          color: const Color.fromARGB(255, 50, 180, 54),
-          child: Image.asset('assets/logo.jpg'),
-        )
+     
+        Expanded(
+          child: Container(
+            child: Image.asset('assets/logo.png'),
+            color: Colors.green,
+            
+          ),
+        ),
+        
       ],
     ));
   }
