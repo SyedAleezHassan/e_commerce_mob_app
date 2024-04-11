@@ -7,7 +7,10 @@ class NextScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.grey,
-      child: Image.asset('assets/sales.jpg'),
+      child: Image.asset(
+        'assets/sales.jpg',
+        fit: BoxFit.cover,
+      ),
     );
   }
 }

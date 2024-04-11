@@ -13,18 +13,18 @@ class SplashScreen extends StatelessWidget {
       );
     });
     return Scaffold(
+        backgroundColor: Colors.green,
         body: Column(
-      children: [
-     
-        Expanded(
-          child: Container(
-            child: Image.asset('assets/logo.png'),
-            color: Colors.green,
-            
-          ),
-        ),
-        
-      ],
-    ));
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/logo.png',
+              
+            ),
+            SizedBox(height: 2),
+            Image.asset('assets/text.png',),
+          ],
+        ));
   }
 }
