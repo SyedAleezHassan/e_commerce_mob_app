@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/signUp.dart';
 import 'package:e_commerce_app/splash.dart';
 import 'package:flutter/material.dart';
 

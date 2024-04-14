@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/signUp.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -17,17 +18,42 @@ class NextScreen extends StatelessWidget {
           fit: BoxFit.cover,
         ),
         // Overlay image
+        GestureDetector(
+          onTap: () {
+            // Navigate to the second screen when the image is tapped
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => signUp()),
+            );
+          },
+          child: Positioned(
+            top: 200,
+            left: 50,
+            child: Image.asset(
+              'assets/button.png',
+              width: 200,
+              height: 200,
+            ),
+          ),
+        ),
+
         Positioned(
-          top: 100, // adjust the position as per your requirement
-          left: 50, // adjust the position as per your requirement
+          top: 200,
+          left: 50,
           child: Image.asset(
-            'assets/button.jpg', // replace with your overlay image path
-            width: 200, // adjust width as per your requirement
-            height: 200, // adjust height as per your requirement
-            // You can also use other properties like alignment, colorBlendMode, etc.
+            'assets/text2.png',
+            width: 200,
+            height: 200,
+          ),
+        ),
+        Positioned(
+          top: 300, // adjust the position as per your requirement
+          left: 60,
+          child: Image.asset(
+            'assets/Vector.png',
           ),
         ),
       ],
     );
-      }
+  }
 }
