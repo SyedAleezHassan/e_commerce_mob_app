@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class signUp extends StatelessWidget {
   const signUp({super.key});
@@ -7,37 +8,36 @@ class signUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Image.asset(
-            'assets/food.png',
-            height: 250,
-            width: 250,
-          ),
-          Image.asset(
-            'assets/getGroceryText.png',
-            height: 50,
-            width: 100,
-          ),
-          TextField(),
-          Container(
-            child: Image.asset(
+      body: Stack(children: [
+        Column(
+          children: [
+            Image.asset(
+              'assets/food.png',
+              height: 250,
+              width: 250,
+            ),
+            Image.asset(
+              'assets/getGroceryText.png',
+              height: 50,
+              width: 100,
+            ),
+            TextField(),
+            Image.asset(
               'assets/google.png',
-              height: 100,
-              width: 200,
+              height: 50,
+              width: 120,
             ),
-            margin: EdgeInsets.only(bottom: 5),
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 5),
-            child: Image.asset(
-              'assets/facebook.png',
-              height: 100,
-              width: 200,
+            Positioned(
+              child: Image.asset(
+                'assets/facebook.png',
+                fit: BoxFit.contain,
+                height: 50,
+                width: 120,
+              ),
             ),
-          ),
-        ],
-      ),
+          ],
+        ),
+      ]),
     );
   }
 }
