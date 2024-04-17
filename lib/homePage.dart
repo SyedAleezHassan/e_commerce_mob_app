@@ -96,6 +96,25 @@ class _homePageState extends State<homePage> {
               ],
             ),
           ),
+          Positioned(
+              left: 15,
+              top: 200,
+              child: Image.asset(
+                'assets/offer.png',
+                height: 100,
+                width: 100,
+              )),
+          Positioned(
+            top: 237,
+            right: 20,
+            child: InkWell(
+              onTap: () {},
+              child: const Text(
+                "See all",
+                style: TextStyle(color: Colors.green),
+              ),
+            ),
+          ),
         ]),
       ),
     );
