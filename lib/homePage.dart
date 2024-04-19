@@ -3,19 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-class homePage extends StatefulWidget {
+class homePage extends StatelessWidget {
   homePage({super.key});
 
-  @override
-  State<homePage> createState() => _homePageState();
-}
-
-class _homePageState extends State<homePage> {
   final List<String> images = [
     'assets/slider.jpg',
     'assets/slider.jpg',
     'assets/slider.jpg',
   ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -115,6 +111,75 @@ class _homePageState extends State<homePage> {
               ),
             ),
           ),
+          Positioned(
+              top: 265,
+              left: 12,
+              child: Container(
+                width: 100,
+                height: 140,
+                margin: EdgeInsets.all(4.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(4.0),
+                  boxShadow: [
+                    BoxShadow(
+                      color:
+                          Color.fromARGB(255, 239, 228, 228).withOpacity(0.5),
+                      spreadRadius: 1,
+                      blurRadius: 3,
+                      offset: Offset(0, 2), // Shadow position, bottom right
+                    ),
+                  ],
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      width: double.infinity,
+                      height: 80,
+                      child: ClipRRect(
+                        borderRadius: const BorderRadius.vertical(
+                          top: Radius.circular(4.0),
+                        ),
+                        child: Image.asset(
+                          'assets/banana.jpg',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'banana',
+                            style: TextStyle(
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 1.0),
+                          Text(
+                            'Quantity: 4',
+                            style: TextStyle(
+                              fontSize: 8.0,
+                              color: Colors.grey[700],
+                            ),
+                          ),
+                          SizedBox(height: 1.0),
+                          Text(
+                            'Price: 15',
+                            style: TextStyle(
+                              fontSize: 10.0,
+                              color: Colors.grey[700],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              )),
         ]),
       ),
     );
