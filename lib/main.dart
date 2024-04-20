@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/NextScreen.dart';
 import 'package:e_commerce_app/homePage.dart';
 import 'package:e_commerce_app/signUp.dart';
 import 'package:e_commerce_app/splash.dart';
@@ -12,6 +13,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: homePage());
+    return MaterialApp(home: SplashScreen());
   }
 }
